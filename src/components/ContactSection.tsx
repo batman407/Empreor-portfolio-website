@@ -8,15 +8,30 @@ export default function ContactSection() {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
     const [loading, setLoading] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
-        // Simulate form submission
-        setTimeout(() => {
+
+        try {
+            const response = await fetch("https://formspree.io/f/xvzbynal", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                alert("Message sent successfully! We will get back to you soon.");
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                alert("There was a problem sending your message. Please try again.");
+            }
+        } catch (error) {
+            alert("There was a problem sending your message. Please check your connection and try again.");
+        } finally {
             setLoading(false);
-            alert("Message sent successfully!");
-            setFormData({ name: "", email: "", message: "" });
-        }, 1500);
+        }
     };
 
     return (
