@@ -35,7 +35,7 @@ export default function Footer() {
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[var(--color-gold)] transition-colors">
                                 <FaGithub size={24} />
                             </a>
-                            <a href="mailto:favourdarasimi1883@gmail.com" className="text-gray-400 hover:text-[var(--color-gold)] transition-colors">
+                            <a href="mailto:favourbolly0@gmail.com" className="text-gray-400 hover:text-[var(--color-gold)] transition-colors">
                                 <FaEnvelope size={24} />
                             </a>
                         </div>

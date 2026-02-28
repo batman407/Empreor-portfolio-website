@@ -67,8 +67,8 @@ export default function ContactSection() {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-semibold text-white mb-1">Email</h3>
-                                    <a href="mailto:favourdarasimi1883@gmail.com" className="text-gray-400 hover:text-[var(--color-gold)] transition-colors">
-                                        favourdarasimi1883@gmail.com
+                                    <a href="mailto:favourbolly0@gmail.com" className="text-gray-400 hover:text-[var(--color-gold)] transition-colors">
+                                        favourbolly0@gmail.com
                                     </a>
                                 </div>
                             </div>
